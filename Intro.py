@@ -89,6 +89,6 @@ with col4:
  image = Image.open('Chat_pdf.png')
  st.image(image, width=190)
  st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://t8pwvf7om2y4dwtcjzvsyu.streamlit.app/
+ url = "https://t8pwvf7om2y4dwtcjzvsyu.streamlit.app/"
  st.write(f"RAG: [Enlace]({url})")
 
