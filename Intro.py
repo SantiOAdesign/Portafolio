@@ -14,7 +14,7 @@ with st.sidebar:
 url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
 st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 with col1:
  
@@ -84,7 +84,6 @@ with col3:
  url = "https://yolov5-5yqzwefd2zf89jldf6yshb.streamlit.app/"
  st.write(f"Vision: [Enlace]({url})")
 
-with col4: 
  st.subheader("TM")
  image = Image.open('Chat_pdf.png')
  st.image(image, width=190)
