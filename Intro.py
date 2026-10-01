@@ -29,7 +29,7 @@ with col1:
  image = Image.open('Search.jpg')
  st.image(image, width=200)
  st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://cvapyaefj449sug9gsam8c.streamlit.app/"
+ url = "https://bp8iwb4dbkrquzv5vjzc9k.streamlit.app/"
  st.write(f"YOLO: [Enlace]({url})")
 
  st.subheader("Traductor")
