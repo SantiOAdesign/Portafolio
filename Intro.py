@@ -39,6 +39,27 @@ with col1:
  url = "https://traductor-hrem3zxspzp4rwujcr4bnr.streamlit.app/"
  st.write(f"YOLO: [Enlace]({url})")
 
+ st.subheader("Visión")
+ image = Image.open('OIG2.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como la IA analiza y describe imágenes.")
+ url = "https://visionapp-mhotrfcjf8gnwmpkzbukd4.streamlit.app/"
+ st.write(f"Visión: [Enlace]({url})")
+
+ st.subheader("MNIST")
+ image = Image.open('data_analisis.png')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como un modelo reconoce dígitos escritos a mano.")
+ url = "https://mnistpred-npzoxykkwibjijseb6jqbj.streamlit.app/"
+ st.write(f"MNIST: [Enlace]({url})")
+
+ st.subheader("Reconocimiento de dibujos")
+ image = Image.open('OIG4.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como la IA interpreta un dibujo hecho a mano.")
+ url = "https://drawrecog-mdtvsmsktcpsxntnzvcgkv.streamlit.app/"
+ st.write(f"Dibujos: [Enlace]({url})")
+
 with col2: 
  st.subheader("OCR")
  image = Image.open('4.jpg')
@@ -60,6 +81,27 @@ with col2:
  st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
  url = "https://wordcloud-nandd3q7dqxnausb9vfgax.streamlit.app/"
  st.write(f"Transcriptor: [Enlace]({url})")
+
+ st.subheader("Tablero")
+ image = Image.open('OIG3.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos un tablero para dibujar libremente.")
+ url = "https://tablero-lnqsv5cpxoibp7pjv4mzwz.streamlit.app/"
+ st.write(f"Tablero: [Enlace]({url})")
+
+ st.subheader("Control por voz")
+ image = Image.open('OIG5.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como controlar dispositivos usando la voz.")
+ url = "https://ctrlvoice-oygj8kskb9b8hvpl4yn2dz.streamlit.app/"
+ st.write(f"Control por voz: [Enlace]({url})")
+
+ st.subheader("Envío MQTT")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como enviar mensajes a dispositivos con MQTT.")
+ url = "https://sendcmqtt-ekssvqkaj4ihayamxq5hrc.streamlit.app/"
+ st.write(f"Envío MQTT: [Enlace]({url})")
 
 
 with col3: 
@@ -90,4 +132,11 @@ with col3:
  st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
  url = "https://t8pwvf7om2y4dwtcjzvsyu.streamlit.app/"
  st.write(f"RAG: [Enlace]({url})")
+
+ st.subheader("Recepción MQTT")
+ image = Image.open('audio_to_txt.png')
+ st.image(image, width=200)
+ st.write("En la siguiente enlace veremos como recibir datos de sensores con MQTT.")
+ url = "https://recepmqtt-m8v3xlmratqxodjfd7spj7.streamlit.app/"
+ st.write(f"Recepción MQTT: [Enlace]({url})")
 
