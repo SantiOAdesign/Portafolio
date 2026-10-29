@@ -80,6 +80,18 @@ AREAS = [
 
 total_proyectos = sum(len(area["proyectos"]) for area in AREAS)
 
+# Portafolio 2: aplicaciones agregadas en la segunda entrega del portafolio.
+# Sus tarjetas llevan la etiqueta "Portafolio 2".
+PORTAFOLIO_2 = {
+  "Visión",
+  "MNIST",
+  "Reconocimiento de dibujos",
+  "Tablero",
+  "Control por voz",
+  "Envío MQTT",
+  "Recepción MQTT",
+}
+
 st.markdown("""
 <style>
 .block-container {padding-top: 2.5rem; max-width: 1200px;}
@@ -111,6 +123,10 @@ a.card:hover {transform: translateY(-4px); border-color: var(--a2); box-shadow: 
   background-image: linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
   background-size: 22px 22px;}
 .portada svg {width: 58px; height: 58px; position: relative; filter: drop-shadow(0 4px 10px rgba(0,0,0,.25));}
+.etiqueta {position: absolute; top: .7rem; left: .7rem; padding: .2rem .6rem; border-radius: 999px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .04em; color: #fff; background: rgba(13,15,26,.55);
+  border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(4px);}
+.chip.p2 {font-weight: 600;}
 .cuerpo {padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: .35rem; flex: 1;}
 .cuerpo .nombre-app {font-weight: 700; font-size: 1.05rem;}
 .cuerpo .desc {font-size: .9rem; opacity: .72; line-height: 1.45; flex: 1;}
@@ -125,9 +141,10 @@ def tarjeta(nombre, icono, descripcion, url, colores):
     '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" '
     f'stroke-linecap="round" stroke-linejoin="round">{ICONOS[icono]}</svg>'
   )
+  etiqueta = '<span class="etiqueta">Portafolio 2</span>' if nombre in PORTAFOLIO_2 else ""
   return (
     f'<a class="card" href="{url}" target="_blank" style="--a1:{colores[0]};--a2:{colores[1]}">'
-    f'<div class="portada">{svg}</div>'
+    f'<div class="portada">{etiqueta}{svg}</div>'
     f'<div class="cuerpo"><span class="nombre-app">{nombre}</span>'
     f'<span class="desc">{descripcion}</span><span class="abrir">Abrir aplicación →</span></div></a>'
   )
@@ -156,6 +173,7 @@ st.markdown(
   'construidas con modelos de Inteligencia Artificial.</p>'
   '<div class="chips">'
   f'<span class="chip">{total_proyectos} proyectos</span>'
+  f'<span class="chip p2">Portafolio 2 · {len(PORTAFOLIO_2)} apps nuevas</span>'
   f'<span class="chip">{len(AREAS)} áreas</span>'
   f'<a class="chip" href="{url_ia}" target="_blank">Páginas y ejercicios prácticos ↗</a>'
   '</div></div>',
